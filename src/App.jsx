@@ -7,10 +7,12 @@ import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 import Particles from "./components/Particles";
+import CustomCursor from "./components/CustomCursor";
 
 function App() {
   return (
     <div className="relative gradient text-white">
+      <CustomCursor />
       <Particles />
       <Navbar />
       <Home />
