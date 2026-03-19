@@ -6,10 +6,12 @@ import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
+import Particles from "./components/Particles";
 
 function App() {
   return (
     <div className="relative gradient text-white">
+      <Particles />
       <Navbar />
       <Home />
       <About />
