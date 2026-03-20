@@ -144,7 +144,7 @@ const Skills = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
       >
-        My Skills
+        How I Build
       </motion.h2>
       <motion.p
         className="mt-2 mb-8 text-white/90 text-base sm:text-lg z-10"

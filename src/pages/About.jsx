@@ -85,7 +85,7 @@ const About = () => {
           viewport={{ once: true, amount: 0.4 }}
         >
           <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
-            About Me
+            The Way I Think
           </h3>
           <p className="text-gray-300 leading-relaxed text-base sm:text-lg">
             Motivated Software Engineering graduate with strong technical skills
