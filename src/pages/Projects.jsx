@@ -1,6 +1,6 @@
 import ngoPhotoMobile from "../assets/ngo-mobile.jpeg";
 import ngoPhotoDesktop from "../assets/ngo-project.png";
-import bankPhotoMobile from "../assets/banking-mobile.png";
+import bankPhotoMobile from "../assets/banking.png";
 import bankPhotoDesktop from "../assets/banking.png";
 import { useMemo, useRef, useState } from "react";
 import useIsMobile from "../hooks/useIsMobile.js";
@@ -70,8 +70,15 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 ${activeIndex === index ? "opacity-100 z-20" : "opacity-0 z-0 sm:z-10"}`}
-              style={{ width: "85%", maxWidth: "1200px" }}
+              className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 ${
+                activeIndex === index
+                  ? "opacity-100 z-20"
+                  : "opacity-0 z-0 sm:z-10"
+              }
+                  w-[92%] sm:w-[90%] md:w-[85%]
+                  max-w-250
+                  flex flex-col items-center
+                `}
             >
               <AnimatePresence mode="wait">
                 {activeIndex === index && (
@@ -81,7 +88,11 @@ const Projects = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 30 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className={`block text-center text-[clamp(2rem,6vw,5rem)] text-white/95 sm:absolute sm:-top-20 sm:left-[35%] lg:left-[-5%] sm:mb-0 italic font-semibold ${isMobile ? "-mt-24" : ""}`}
+                    className={`text-center md:text-left
+                        text-[clamp(1.8rem,5vw,4rem)]
+                        text-white/95
+                        mb-4 sm:mb-6 md:mb-8
+                        italic font-semibold ${isMobile ? "-mt-24" : ""}`}
                     style={{
                       zIndex: 5,
                       textAlign: isMobile ? "center" : "left",
@@ -92,18 +103,17 @@ const Projects = () => {
                 )}
               </AnimatePresence>
               <div
-                className={`relative w-full overflow-hidden bg-black/20 shadow-2xl md:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.7)] ${isMobile ? "mb-6 rounded-lg" : "mb-10 sm:mb-12 rounded-xl"}  h-[70vh] sm:h-[75vh] md:h-[80vh]
-                max-h-180`}
+                className={`relative w-full overflow-hidden bg-black/20 shadow-2xl md:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.7)] ${isMobile ? "mb-4 rounded-lg" : "mb-6 rounded-xl"}  h-[50vh] sm:h-[60vh] md:h-[65vh]`}
                 style={{ zIndex: 10, transition: "box-shadow 205ms ease" }}
               >
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover  object-center drop-shadow-xl md:drop-shadow-2xl"
+                  className="w-full h-full object-cover  object-center"
                   style={{
                     position: "relative",
                     zIndex: 10,
-                    filter: "drop-shadow(0,16px 40px rgba(0,0,0, 0.65))",
+                    filter: "drop-shadow(0 16px 40px rgba(0,0,0, 0.65))",
                     transition: "filter 200ms ease",
                   }}
                   loading="lazy"
@@ -111,16 +121,17 @@ const Projects = () => {
                 <div
                   className="pointer-events-none absolute inset-0"
                   style={{
-                    zIndex: 11,
                     background:
-                      "linear-gradient(180deg, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0) 40%",
+                      "linear-gradient(180deg, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0) 40%)",
                   }}
-                ></div>
+                />
               </div>
             </div>
           ))}
         </div>
-        <div className={`absolute ${isMobile ? "bottom-20" : "bottom-1"}`}>
+        <div
+          className={`absolute ${isMobile ? "bottom-12" : "bottom-8"} left-1/2 -translate-x-1/2 z-30`}
+        >
           <a
             href={activeProject?.link}
             target="_blank"
