@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import Particles from "../components/Particles";
 import { motion, scale } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { filter, s } from "framer-motion/client";
+import avatar from "../assets/avatar.png";
 
 /* SOCIAL ICONS */
 const socialIcons = [
@@ -87,6 +87,7 @@ const Home = () => {
         <div className="absolute bottom-0 right-0 w-3/4 sm:w-1/2 md:w-2/5 h-[70vh] sm:h-[50vh] md:h-[40vh] max-w-125 max-h-125 rounded-full bg-linear-to-r from-[#302b63] via-[#00bf8f] to-[#1cd8d2] opacity-30 sm:opacity-20 md:opacity-10 blur-[100px] sm:blur-[130px] md:blur-[150px] animate-pulse delay-500"></div>
       </div>
       <div className="relative z-10 h-full w-full max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2">
+        {/* LEFT COLUMN */}
         <div className="flex flex-col justify-center h-full text-center  lg:text-left relative">
           <div className="w-full lg:pr-24 mx-auto  max-w-3xl">
             <motion.div
@@ -160,6 +161,32 @@ const Home = () => {
               ))}
             </div>
           </div>
+        </div>
+        {/* RIGHT COLUMN */}
+        <div className="relative hidden lg:block">
+          <div
+            className="
+              absolute top-1/2 -translate-y-1/2 pointer-events-none
+              right-0 md:right-2.5
+              
+              w-[60vw] sm:w-[35vw] md:w-[22vw] max-w-102.5
+              h-[50vh] sm:h-[45vh] md:h-[40vh] max-h-190
+              
+              rounded-full
+              opacity-30
+              blur-[60px]
+              
+              bg-[radial-gradient(circle,#1cd8d2_0%,#00bf8f_40%,#302b63_100%)]
+              "
+          />
+          <motion.img
+            src={avatar}
+            alt="Aakash Kashyap"
+            className="absolute top-1/2 -translate-y-1/2 -right-7.5 w-[min(45vw,780px)] max-h-[90vh] object-contain select-none pointer-events-none"
+            initial={{ opacity: 0, x: 40, scale: 0.98 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+          />
         </div>
       </div>
     </section>
