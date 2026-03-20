@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Glows from "../components/Glows";
-import profilePic from "../assets/Profile.jpeg";
+import profilePic from "../assets/Profile.png";
 
 const About = () => {
   const stats = [
