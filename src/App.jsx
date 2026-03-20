@@ -8,21 +8,30 @@ import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 // import Particles from "./components/Particles";
 import CustomCursor from "./components/CustomCursor";
+import { useState } from "react";
+import Intro from "./components/Intro";
 
 function App() {
+  const [introDone, setIntroDone] = useState(false);
+
   return (
-    <div className="relative gradient text-white">
-      <CustomCursor />
-      {/* <Particles /> */}
-      <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Contact />
-      <Footer />
-    </div>
+    <>
+      {!introDone && <Intro onFinish={() => setIntroDone(true)} />}
+      {introDone && (
+        <div className="relative gradient text-white">
+          <CustomCursor />
+          {/* <Particles /> */}
+          <Navbar />
+          <Home />
+          <About />
+          <Skills />
+          <Projects />
+          <Experience />
+          <Contact />
+          <Footer />
+        </div>
+      )}
+    </>
   );
 }
 
