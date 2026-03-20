@@ -43,7 +43,7 @@ const Particles = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed left-0 top-0 w-full h-full pointer-events-none z-0"
+      className="absolute left-0 top-0 w-full h-full pointer-events-none z-0"
     ></canvas>
   );
 };

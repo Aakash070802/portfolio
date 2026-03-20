@@ -3,6 +3,7 @@ import Particles from "../components/Particles";
 import { motion, scale } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import avatar from "../assets/avatar.png";
+import Glows from "../components/Glows";
 
 /* SOCIAL ICONS */
 const socialIcons = [
@@ -82,10 +83,7 @@ const Home = () => {
       className="w-full h-screen relative bg-black overflow-hidden"
     >
       <Particles />
-      <div className="absolute inset-0">
-        <div className="absolute top-0 -left-32 w-3/4 sm:w-1/2 md:w-2/5 h-[70vh] sm:h-[50vh] md:h-[40vh] max-w-125 max-h-125 rounded-full bg-linear-to-r from-[#302b63] via-[#00bf8f] to-[#1cd8d2] opacity-30 sm:opacity-20 md:opacity-10 blur-[100px] sm:blur-[130px] md:blur-[150px] animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-3/4 sm:w-1/2 md:w-2/5 h-[70vh] sm:h-[50vh] md:h-[40vh] max-w-125 max-h-125 rounded-full bg-linear-to-r from-[#302b63] via-[#00bf8f] to-[#1cd8d2] opacity-30 sm:opacity-20 md:opacity-10 blur-[100px] sm:blur-[130px] md:blur-[150px] animate-pulse delay-500"></div>
-      </div>
+      <Glows />
       <div className="relative z-10 h-full w-full max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2">
         {/* LEFT COLUMN */}
         <div className="flex flex-col justify-center h-full text-center  lg:text-left relative">
@@ -105,7 +103,7 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              Hello I'm
+              Hello, I'm
               <br />
               <span className="text-white font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl lg:whitespace-nowrap">
                 Aakash Kashyap
@@ -117,10 +115,9 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Building systems that don’t break when things get real. From user
-              authentication to transaction logic and role-based platforms, I
-              focus on writing software that handles real-world complexity — not
-              just demos.
+              I turn ideas into working systems — where logic, performance, and
+              user experience all meet. Clean logic, smooth interfaces, and
+              systems that behave correctly when it matters.
             </motion.p>
             <motion.div
               className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6"
