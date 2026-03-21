@@ -6,7 +6,6 @@ import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
-// import Particles from "./components/Particles";
 import CustomCursor from "./components/CustomCursor";
 import { useState } from "react";
 import Intro from "./components/Intro";
@@ -20,7 +19,6 @@ function App() {
       {introDone && (
         <div className="relative gradient text-white">
           <CustomCursor />
-          {/* <Particles /> */}
           <Navbar />
           <Home />
           <About />

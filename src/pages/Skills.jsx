@@ -2,7 +2,6 @@
 import { BiLogoPostgresql } from "react-icons/bi";
 import { BsJavascript, BsTypescript } from "react-icons/bs";
 import {
-  FaAws,
   FaCode,
   FaDocker,
   FaGithub,
@@ -11,17 +10,15 @@ import {
   FaReact,
 } from "react-icons/fa";
 import { IoLogoNodejs } from "react-icons/io";
-import { RiNextjsFill, RiTailwindCssFill, RiVercelFill } from "react-icons/ri";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import {
   SiExpress,
-  SiFastapi,
   SiMongodb,
   SiMysql,
   SiPhp,
   SiPostman,
   SiRender,
 } from "react-icons/si";
-import { TbBrandRedux } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
 /* ICON IMPORTS */
 import { motion, useMotionValue } from "framer-motion";
@@ -34,7 +31,6 @@ const Skills = () => {
     { icon: <BsJavascript />, name: "JavaScript" },
     { icon: <BsTypescript />, name: "TypeScript" },
     { icon: <FaReact />, name: "React" },
-    { icon: <TbBrandRedux />, name: "Redux" },
     { icon: <RiNextjsFill />, name: "Next.js" },
     { icon: <RiTailwindCssFill />, name: "Tailwind CSS" },
     { icon: <IoLogoNodejs />, name: "Node.js" },
@@ -44,15 +40,10 @@ const Skills = () => {
     { icon: <SiMongodb />, name: "MongoDB" },
     { icon: <BiLogoPostgresql />, name: "PostgreSQL" },
     { icon: <FaCode title="REST API" />, name: "REST API" },
-    { icon: <SiFastapi />, name: "FastAPI" },
     { icon: <FaDocker />, name: "Docker" },
-    { icon: <FaLinux />, name: "Linux" },
-    { icon: <FaAws />, name: "AWS" },
     { icon: <FaGithub />, name: "GitHub" },
     { icon: <SiPostman />, name: "Postman" },
     { icon: <VscVscode />, name: "VS Code" },
-    { icon: <RiVercelFill />, name: "Vercel" },
-    { icon: <SiRender />, name: "Render" },
   ];
 
   const repeatedSkills = [...skills, ...skills];
