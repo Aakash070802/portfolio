@@ -35,7 +35,7 @@ const Contact = () => {
         (newErrors[field] = "This Field is required"),
     );
 
-    if (formData.service !== "other" && !formData.budget.trim())
+    if (formData.service !== "others" && !formData.budget.trim())
       newErrors.budget = "This Field is required";
 
     setErrors(newErrors);
