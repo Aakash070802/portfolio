@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import Particles from "../components/Particles";
 
 /**
  * Social media links configuration
@@ -41,6 +42,7 @@ const glowVariants = {
 const Footer = () => {
   return (
     <footer className="relative overflow-hidden bg-black">
+      <Particles />
       {/* --- Background neon gradient effects --- */}
       {/* Blue glow overlay (top-right side) */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_60%_at_70%_35%,rgba(13,88,204,0.35),transparent_70%)]" />
@@ -80,10 +82,10 @@ const Footer = () => {
         {/* --- Social Media Links --- */}
         {/* Icons mapped dynamically from `socials` array */}
         <div className="flex gap-5 text-2xl md:text-3xl">
-          {socials.map(({ Icon, label, href }) => (
+          {socials.map(({ Icon, label, url }) => (
             <motion.a
               key={label}
-              href={href}
+              href={url}
               aria-label={label} // Accessible label
               target="_blank"
               rel="noopener noreferrer"
@@ -106,7 +108,7 @@ const Footer = () => {
         {/* --- Personal Quote / Tagline --- */}
         {/* Replace this with your favorite quote or brand message */}
         <p className="text-gray-300 italic max-w-xl">
-          “Success is when Hard Work beats Talent”
+          “Success is when Hard Work beats”
         </p>
 
         {/* --- Copyright / Trademark --- */}
