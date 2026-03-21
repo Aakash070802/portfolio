@@ -6,6 +6,9 @@ A modern, interactive developer portfolio built using **React + Vite + TailwindC
 
 ## 📌 Live Preview
 
+👉 **Check out my portfolio here:**
+🔗 https://aakash-kashyap.vercel.app/
+
 ---
 
 ## 🧠 About the Project
