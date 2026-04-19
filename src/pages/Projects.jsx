@@ -2,6 +2,8 @@ import ngoPhotoMobile from "../assets/ngo-mobile.jpeg";
 import ngoPhotoDesktop from "../assets/ngo-project.png";
 import bankPhotoMobile from "../assets/banking.png";
 import bankPhotoDesktop from "../assets/banking.png";
+import brickNestMobile from "../assets/brick-nest-port-mobile.jpeg";
+import brickNestDesktop from "../assets/brick-nest-port-desk.png";
 import { useMemo, useRef, useState } from "react";
 import useIsMobile from "../hooks/useIsMobile.js";
 import {
@@ -18,6 +20,12 @@ const Projects = () => {
   const projects = useMemo(
     () => [
       {
+        title: "Brick Nest",
+        link: "https://brick-nest-estate.vercel.app/",
+        bgColor: "#2a194a",
+        image: isMobile ? brickNestMobile : brickNestDesktop,
+      },
+      {
         title: "NGO Portal",
         link: "https://ngo.trusteducom.com/",
         bgColor: "#0d4d3d",
@@ -26,7 +34,7 @@ const Projects = () => {
       {
         title: "Banking",
         link: "https://github.com/Aakash070802/banking-management-system.git",
-        bgColor: "#3884d3",
+        bgColor: "#28202f",
         image: isMobile ? bankPhotoMobile : bankPhotoDesktop,
       },
     ],
